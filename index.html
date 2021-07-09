@@ -234,9 +234,9 @@
       show_progress_bar: true,
       on_finish: function() { 
         // Dear Developers! Please see the PHP script under "Storing data permanently" at https://www.jspsych.org/overview/data/ 
-        // In former studies, the following method was used... using a backend developed for an experiment called DinoGame. 
+        // In former studies, the following method was used... 
         jsPsych.data.get().localSave('csv', 'my_BLM_Data.csv');
-        $.post( "http://web.htk.tlu.ee/dinogame" + "/ajax.php?method=save_data", JSON.stringify({"JSON" : jsPsych.data.dataAsJSON(), "csv" : jsPsych.data.dataAsCSV()}) );
+        $.post( "some address" + "/ajax.php?method=save_data", JSON.stringify({"JSON" : jsPsych.data.dataAsJSON(), "csv" : jsPsych.data.dataAsCSV()}) );
         
       }
     });
